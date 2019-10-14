@@ -3,7 +3,14 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class CursosService {
 
+  private cursos: string[] = ['angular', 'c#', 'java', 'php'];
+
   getCursos() {
-    return ['angular', 'c#', 'java', 'php'];
+    return this.cursos;
   }
+
+  addCurso(curso: string) {
+    this.cursos.push(curso);
+  }
+
 }
